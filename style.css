@@ -49,12 +49,10 @@ body {
 
 /* Icon Loading Optimization (Prevent Flash of Unstyled Text) */
 .material-symbols-outlined {
-    width: 24px;
-    height: 24px;
     display: inline-block;
-    overflow: hidden;
     vertical-align: middle;
     user-select: none;
+    /* Removed fixed width/height to avoid cropping large icons */
 }
 
 /* Utility / Layout */
@@ -412,10 +410,13 @@ body {
     backdrop-filter: blur(4px);
     z-index: 1000;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    /* Changed from center to allow scrolling from top */
     justify-content: center;
-    padding: 1rem;
-    padding: 1rem;
+    padding: 2rem 1rem;
+    /* More padding for mobile thumb space */
+    overflow-y: auto;
+    /* Enable scrolling on the overlay */
     animation: fadeIn 0.2s ease-out;
 }
 
@@ -426,9 +427,8 @@ body {
     border-radius: 1.5rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     position: relative;
-    overflow: hidden;
-    position: relative;
-    overflow: hidden;
+    /* Removed overflow: hidden to allow internal layout to breathe, 
+       scrolling is handled by overlay */
     animation: slideUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
