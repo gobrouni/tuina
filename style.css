@@ -47,6 +47,16 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Icon Loading Optimization (Prevent Flash of Unstyled Text) */
+.material-symbols-outlined {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    user-select: none;
+}
+
 /* Utility / Layout */
 .container {
     width: 100%;
