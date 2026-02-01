@@ -137,16 +137,26 @@ body {
 }
 
 .hero-title {
-    font-size: 2.5rem;
-    font-weight: 900;
-    line-height: 1.1;
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.2;
     color: var(--text-main);
+    margin-top: 0.75rem;
+    letter-spacing: -0.01em;
 }
 
 .hero-subtitle {
-    display: block;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background-color: #f8f5f2;
+    /* Light beige/brand wash */
     color: #542e39;
-    margin-top: 0.5rem;
+    /* Brand dark color */
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(84, 46, 57, 0.1);
 }
 
 .hero-desc {
