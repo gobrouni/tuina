@@ -36,6 +36,7 @@ const btnCloseModal = document.getElementById('btn-close-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalEng = document.getElementById('modal-eng');
 const modalDesc = document.getElementById('modal-desc');
+const modalBody = document.querySelector('.modal-body');
 
 // State
 let currentMode = 'exam'; // 'single' or 'exam'
@@ -173,6 +174,9 @@ function showIntro() {
 
 // Logic: Modal Control
 function showModal(item) {
+    // Reset scroll position to top
+    if (modalBody) modalBody.scrollTop = 0;
+
     modalTitle.textContent = item.name;
     // modalEng.textContent = item.engName; // Removed
 
