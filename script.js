@@ -217,11 +217,13 @@ function showModal(item) {
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
 
     // Reset scroll position to top AFTER showing the modal
-    if (modalBody) {
-        modalBody.style.scrollBehavior = 'auto'; // Temporarily disable smooth scroll
-        modalBody.scrollTop = 0;
-        modalBody.style.scrollBehavior = ''; // Restore original behavior
-    }
+    setTimeout(() => {
+        if (modalBody) {
+            modalBody.style.scrollBehavior = 'auto'; // Temporarily disable smooth scroll
+            modalBody.scrollTop = 0;
+            modalBody.style.scrollBehavior = ''; // Restore original behavior
+        }
+    }, 0);
 }
 
 function hideModal() {
