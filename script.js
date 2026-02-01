@@ -174,9 +174,6 @@ function showIntro() {
 
 // Logic: Modal Control
 function showModal(item) {
-    // Reset scroll position to top
-    if (modalBody) modalBody.scrollTop = 0;
-
     modalTitle.textContent = item.name;
     // modalEng.textContent = item.engName; // Removed
 
@@ -218,6 +215,13 @@ function showModal(item) {
 
     modalOverlay.classList.remove('hidden');
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
+
+    // Reset scroll position to top AFTER showing the modal
+    if (modalBody) {
+        modalBody.style.scrollBehavior = 'auto'; // Temporarily disable smooth scroll
+        modalBody.scrollTop = 0;
+        modalBody.style.scrollBehavior = ''; // Restore original behavior
+    }
 }
 
 function hideModal() {
