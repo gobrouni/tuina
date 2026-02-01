@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>十大手法抽題機 - Traditional Massage Study Tool</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Main Content -->
+    <main class="main-content container">
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">
+                民俗調理業傳統整復推拿
+                <span class="hero-subtitle">術科練習工具</span>
+            </h1>
+            <p class="hero-desc">
+                專為技術士檢定設計的隨機抽題系統。保持平靜，專注於每一個手法的細節與力道。
+            </p>
+        </section>
+
+        <!-- View: Intro / Setup -->
+        <section id="view-intro" class="view-section">
+            <p class="intro-instruction">請選擇練習模式</p>
+
+            <!-- Mode Selection Cards -->
+            <div class="mode-selection-cards">
+                <div class="mode-card-label" id="card-single" data-mode="single">
+                    <input class="hidden-radio" name="practice_mode" type="radio" value="single" />
+                    <div class="mode-card-content">
+                        <span class="material-symbols-outlined card-icon">filter_1</span>
+                        <div class="mode-text">
+                            <h3>單題練習</h3>
+                            <p>每次抽 1 題，適合零碎時間</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mode-card-label" id="card-exam" data-mode="exam">
+                    <input class="hidden-radio" name="practice_mode" type="radio" value="exam" />
+                    <div class="mode-card-content">
+                        <span class="material-symbols-outlined card-icon">checklist</span>
+                        <div class="mode-text">
+                            <h3>模擬考 (三題)</h3>
+                            <p>從15組題組中隨機抽取<br>模擬考試情境</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- View: Result / Cards -->
+        <section id="view-result" class="view-section hidden">
+            <div class="result-header">
+                <button class="btn-text" id="btn-back">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    <span>返回設定</span>
+                </button>
+                <h2 id="result-title">模擬考模式</h2>
+            </div>
+
+            <!-- Card Section -->
+            <div class="card-display">
+                <!-- Cards will be injected here by JS -->
+            </div>
+
+            <!-- Action Button -->
+            <button class="btn-primary" id="btn-draw">
+                <span class="material-symbols-outlined">refresh</span>
+                <span>再次抽取</span>
+            </button>
+        </section>
+
+        <!-- Detail Modal -->
+        <div class="modal-overlay hidden" id="detail-modal">
+            <div class="modal-content">
+                <button class="btn-close" id="btn-close-modal">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+
+                <div class="modal-body">
+                    <h2 class="modal-title" id="modal-title">手法名稱</h2>
+                    <div class="divider"></div>
+                    <p class="modal-desc" id="modal-desc">
+                        這裡會顯示手法的詳細說明文字...
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reference Section -->
+        <div class="reference-section">
+            <input class="hidden" id="reference-toggle" type="checkbox" />
+            <label class="ref-toggle-label" for="reference-toggle">
+                <div class="flex-center" style="gap: 0.75rem;">
+                    <span class="material-symbols-outlined" style="color: var(--color-primary);">menu_book</span>
+                    <span style="color: var(--text-main);">十大手法一覽</span>
+                </div>
+                <span class="material-symbols-outlined toggle-icon" style="color: var(--text-muted);">expand_more</span>
+            </label>
+
+            <div class="ref-content">
+                <div class="chip-container">
+                    <div class="chip">摩擦法</div>
+                    <div class="chip">滾法</div>
+                    <div class="chip">拍擊法</div>
+                    <div class="chip">推法</div>
+                    <div class="chip">拿法</div>
+                    <div class="chip">按法</div>
+                    <div class="chip">揉法</div>
+                    <div class="chip">撥法</div>
+                    <div class="chip">抖法</div>
+                    <div class="chip">搖法</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
