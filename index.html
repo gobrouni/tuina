@@ -13,10 +13,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
+    <!-- Preload Material Icons font for faster loading -->
+    <link rel="preload"
+        href="https://fonts.gstatic.com/s/materialsymbolsoutlined/v244/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2"
+        as="font" type="font/woff2" crossorigin />
+    <link href="style.css?v=9d004bdd" rel="stylesheet" />
 </head>
 
-<body>
+<body class="fonts-loading">
 
     <!-- Main Content -->
     <main class="main-content container">
@@ -129,8 +133,20 @@
 
     </main>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="container flex-col flex-center">
+            <a href="https://buymeacoffee.com/gobrouni" target="_blank" class="btn-coffee">
+                <span class="material-symbols-outlined">coffee</span>
+                <span>支持開發者</span>
+            </a>
+            <p class="copyright">© 2026 術科練習工具. Design by Jarvis.</p>
+        </div>
+    </footer>
+
+
+    <script src="data.js?v=2d4c9d04"></script>
+    <script src="script.js?v=3872e627"></script>
 </body>
 
 </html>

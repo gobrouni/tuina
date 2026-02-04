@@ -1,3 +1,19 @@
+/* Font Loading Detection - Prevent FOUT for Material Icons */
+(function () {
+    function showIcons() {
+        document.body.classList.remove('fonts-loading');
+        document.body.classList.add('fonts-loaded');
+    }
+
+    // Use CSS Font Loading API if available
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(showIcons);
+    } else {
+        // Fallback for older browsers: show icons after a timeout
+        setTimeout(showIcons, 1000);
+    }
+})();
+
 /* Data - The 10 Techniques */
 // Techniques data is now loaded from data.js (generated from questions.md)
 
@@ -217,6 +233,7 @@ function showModal(item) {
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
 
     // Reset scroll position to top AFTER showing the modal
+    // Using setTimeout to ensure the layout has updated before setting scrollTop
     setTimeout(() => {
         if (modalBody) {
             modalBody.style.scrollBehavior = 'auto'; // Temporarily disable smooth scroll
