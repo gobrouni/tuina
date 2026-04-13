@@ -1,0 +1,11 @@
+{
+  "name": "民俗調理業傳統整復推拿 - 術科練習工具",
+  "short_name": "術科練習",
+  "description": "專為民俗調理業技術士檢定設計的術科練習工具",
+  "icons": [
+    { "src": "favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "start_url": "/",
+  "display": "browser"
+}
