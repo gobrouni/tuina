@@ -1,0 +1,1 @@
+!function(){var a=document.createElement("script");function t(){dataLayer.push(arguments)}a.async=!0,a.src="https://www.googletagmanager.com/gtag/js?id=G-0HC2T4MRG9",document.head.appendChild(a),window.dataLayer=window.dataLayer||[],window.gtag=t,t("js",new Date),t("config","G-0HC2T4MRG9")}();
